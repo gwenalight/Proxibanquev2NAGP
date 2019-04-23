@@ -3,12 +3,24 @@ package model;
 public class CompteBancaire {
 
 	private Long idCompte;
+	private double numeroCompte;
 	private double sold;
 	private String openDate;
 	
 	public CompteBancaire() {
 		super();
 	}
+	
+	public CompteBancaire(String openDate) {
+		super();
+		this.openDate = openDate;
+	}
+
+	public CompteBancaire(double numeroCompte) {
+		super();
+		this.numeroCompte = numeroCompte;
+	}
+
 	public CompteBancaire(Long idCompte, double sold, String openDate) {
 		super();
 		this.idCompte = idCompte;

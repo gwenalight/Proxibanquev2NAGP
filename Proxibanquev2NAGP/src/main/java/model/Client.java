@@ -24,6 +24,16 @@ public class Client {
 		super();
 	}
 
+
+
+	public Client(String name, String firstName) {
+		super();
+		this.name = name;
+		this.firstName = firstName;
+	}
+
+
+
 	public Client(Long idClient, String name, String firstName, String email, String adress, String postalCode,
 			String city, String number) {
 		super();
