@@ -4,10 +4,12 @@ public class Conseiller {
 
 	// attribut
 	private Long idConseiller;
+	private String login;
+	private String password;
 	private String name;
 	private String firstName;
 
-	//getter&setter
+	// getter&setter
 	public Long getIdConseiller() {
 		return idConseiller;
 	}
@@ -32,8 +34,28 @@ public class Conseiller {
 		this.firstName = firstName;
 	}
 
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	// constructor
-	
+
+	public Conseiller() {
+		super();
+	}
+
 	public Conseiller(Long idConseiller, String name, String firstName) {
 		super();
 		this.idConseiller = idConseiller;
@@ -41,14 +63,15 @@ public class Conseiller {
 		this.firstName = firstName;
 	}
 
-	public Conseiller() {
+	public Conseiller(String login, String password) {
 		super();
+		this.login = login;
+		this.password = password;
 	}
 
 	@Override
 	public String toString() {
 		return "Conseiller [idConseiller=" + idConseiller + ", name=" + name + ", firstName=" + firstName + "]";
 	}
-	
 
 }
