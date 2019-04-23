@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+	<persistence-unit name="pu"
+		transaction-type="RESOURCE_LOCAL">
+		<!--on donne un nom qu'importe + ressource local signiffie qu'on fait tout 
+			à la mains --> 
+			
+
+		<properties>
+
+			<!-- Database connection settings -->
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" /> <!-- on dit quel est le driver -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/Proxibanquev2NAGP?createDatabaseIfNotExist=true" /> <!--on donne l'url(chiffre) et le nom de la base de donné(a changer en fonction 
+				de notre BD) -->
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<!--utilisateur ici root -->
+			<property name="javax.persistence.jdbc.password" value="" />
+			<!--mot de passe " " -->
+
+			<!-- SQL dialect -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQL5Dialect" /> <!--specifie quel langage on utilise ici hibernate -->
+			<!--ca permet dexpliquer a notre outils comment ecrire les requetes -->
+
+			<!-- Create/update tables automatically using mapping metadata -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+
+			<!-- Pretty print the SQL in the log file and console -->
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.show_sql" value="true" />
+
+
+
+		</properties>
+
+	</persistence-unit>
+</persistence>
+
+
+
+
+
+
